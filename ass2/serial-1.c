@@ -1,6 +1,6 @@
 #include <windows.h>
 #include <stdio.h>
-
+//write command
 void setCommand(char* p, char s) {
 	// three-byte format: 11111110 - 00AAAAAA - ACCDDDDD
 	// if the engine is addressed with 23 (in binary: 10111), then AAAAAAA will be 0010111
