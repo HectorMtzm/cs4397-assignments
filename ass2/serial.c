@@ -45,7 +45,8 @@ int main()
 			return result;
 	}
 
-	return 0;
+	setCommand(bytes_to_send, 's');
+	return sendCommand(bytes_to_send);
 }
 
 int sendCommand(char* bytes_to_send){
