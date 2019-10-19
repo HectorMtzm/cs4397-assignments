@@ -4,7 +4,7 @@
 void setCommand(char* p, char s) {
 	// three-byte format: 11111110 - 00AAAAAA - ACCDDDDD
 	// if the engine is addressed with 23 (in binary: 10111), then AAAAAAA will be 0010111
-
+ 
 	// the first byte is OFE
 	*p |= 1 << 1;
 	*p |= 1 << 2;
