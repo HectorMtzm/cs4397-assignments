@@ -31,7 +31,10 @@ int main()
 		if(action != 'b'){
 			result = sendCommand(bytes_to_send);
 		} else {
+			int i;
+			for(i = 0; i < 10; i++){
 				result = sendCommand(bytes_to_send);
+			}
 		}
 
 		bytes_to_send[0] = 0;
