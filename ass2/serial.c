@@ -32,7 +32,7 @@ int main()
 			result = sendCommand(bytes_to_send);
 		} else {
 			int i;
-			for(i = 0; i < 10; i++){
+			for(i = 0; i < 10; i++){ 
 				result = sendCommand(bytes_to_send);
 			}
 		}
