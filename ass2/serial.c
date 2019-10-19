@@ -10,7 +10,7 @@ int main()
 	bytes_to_send[1] = 0;
 	bytes_to_send[2] = 0;
 
-	setCommand(bytes_to_send, 'e');
+	setCommand(bytes_to_send, 'a');
 
 	// Declare variables and structures
 	HANDLE hSerial;

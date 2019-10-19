@@ -44,6 +44,19 @@ void setCommand(char* p, char s) {
 		*(p + 2) |= 1 << 4;
         break;
 
+    case 'a':   //accelerate    0000000
+		*(p + 2) |= 0;
+		*(p + 2) |= 0;
+		*(p + 2) |= 0;
+		*(p + 2) |= 0;
+        break;
+
+	case 'd':   //Decelerate    0000000
+		*(p + 2) |= 1;
+		*(p + 2) |= 1 << 1;
+        break;
+        
+
 	default: break;
 	}
 
