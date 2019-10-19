@@ -29,9 +29,12 @@ int main()
 
 		int result = sendCommand(bytes_to_send);
 
+		bytes_to_send[0] = 0;
+		bytes_to_send[1] = 0;
+		bytes_to_send[2] = 0;
+
 		if(result > 0)
 			return result;
-
 	}
 
 	return 0;
