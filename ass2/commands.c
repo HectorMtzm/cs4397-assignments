@@ -54,13 +54,13 @@ void setCommand(char* p, char s) {
 		*(p + 2) |= 1 << 1;
 		*(p + 2) |= 1 << 6;
 		*(p + 2) |= 1 << 8;
-
         break;
 
-	case 's':		//stop		1101000	
+	case 's':		//stop		1100000	
+		*(p + 2) |= 1 << 5;
 		*(p + 2) |= 1 << 6;
-		*(p + 2) |= 1 << 3;
 		*(p + 2) |= 1 << 7;
+		*(p + 2) |= 1 << 8;
 		break;
 
 	case 't':		//start		1100111	
