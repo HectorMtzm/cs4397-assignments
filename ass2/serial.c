@@ -1,40 +1,6 @@
 #include <windows.h>
 #include <stdio.h>
-
-void setCommand(char* p, char s) {
-	// three-byte format: 11111110 - 00AAAAAA - ACCDDDDD
-	// if the engine is addressed with 23 (in binary: 10111), then AAAAAAA will be 0010111
- 
-	// the first byte is OFE
-	*p |= 1 << 1;
-	*p |= 1 << 2;
-	*p |= 1 << 3;
-	*p |= 1 << 4;
-	*p |= 1 << 5;
-	*p |= 1 << 6;
-	*p |= 1 << 7;
-
-	// the second byte: 00AAAAAA
-	//engine addressing code:   000010111
-	*(p + 1) |= 1 ;
-	*(p + 1) |= 1 << 1;
-	*(p + 1) |= 1 << 3;
-
-	// the third byte: 1CCDDDDD
-	*(p + 2) |= 1 << 7;
-
-	switch (s) {
-		// remain part for the third byte
-	case 'h': // h - horn 1:   0011100
-		*(p + 2) |= 1 << 2;
-		*(p + 2) |= 1 << 3;
-		*(p + 2) |= 1 << 4;
-		break;
-
-	default: break;
-	}
-
-}
+#include "commands.c"
 
 int main()
 {
@@ -44,7 +10,7 @@ int main()
 	bytes_to_send[1] = 0;
 	bytes_to_send[2] = 0;
 
-	setCommand(bytes_to_send, 'h');
+	setCommand(bytes_to_send, 'e');
 
 	// Declare variables and structures
 	HANDLE hSerial;
