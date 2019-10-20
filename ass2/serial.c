@@ -41,7 +41,7 @@ int main()
 		bytes_to_send[1] = 0;
 		bytes_to_send[2] = 0;
 
-		if(result > 0)
+		if(result > 0) 
 			return result;
 	}
 
@@ -49,7 +49,7 @@ int main()
 	return sendCommand(bytes_to_send);
 }
 
-int sendCommand(char* bytes_to_send){
+int sendCommand(char* bytes_to_send){ 
 	
 	// Declare variables and structures
 	HANDLE hSerial;
