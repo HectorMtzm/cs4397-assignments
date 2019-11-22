@@ -35,3 +35,5 @@ def: getDistance():
         return value                            # print the distance in CM
     except brickpi3.SensorError as error:
         print(error)
+		
+main()
