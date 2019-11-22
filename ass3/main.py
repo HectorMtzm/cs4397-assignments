@@ -19,7 +19,7 @@ main():
                     if(getDistance() > 30):
                         BP.set_motor_power(BP.PORT_A + BP.PORT_D, speedAdvanceToGetOverTheRailsOfTheTrain)
                         while(True):
-                            if(getDistance() > 3)
+                            if(getDistance() < 3)
                                 BP.set_motor_power(BP.PORT_A + BP.PORT_D, speedStop)
                             time.sleep(0.02)
                     time.sleep(0.02)       
